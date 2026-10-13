@@ -1,0 +1,16 @@
+export PROJECT_ID="utec-posgrado-01"
+export PROJECT_NUMBER="$(gcloud projects describe "$PROJECT_ID" --format='value(projectNumber)')"
+
+# Usa solo letras minúsculas y números; identifica tu cuenta/alumno y que sea único.
+export ALUMNO_ID="cesarmv85-del" # CAMBIAR por tu identificador único
+
+export POOL_ID="github-pool-$ALUMNO_ID"
+export PROVIDER_ID="github-provider-$ALUMNO_ID"
+export SA_ID="github-actions-$ALUMNO_ID"
+export SA_EMAIL="$SA_ID@$PROJECT_ID.iam.gserviceaccount.com"
+export RUNTIME_SA_ID="cloud-run-$ALUMNO_ID"
+export RUNTIME_SA_EMAIL="$RUNTIME_SA_ID@$PROJECT_ID.iam.gserviceaccount.com"
+export REPOSITORY="cesarmv85-del/angular-cloud-run-v2" # CAMBIAR por OWNER/REPO de tu fork
+export GITHUB_ENVIRONMENT="dev"
+export GCP_REGION="us-central1"
+export ARTIFACT_REGISTRY_REPO="app-$ALUMNO_ID"
